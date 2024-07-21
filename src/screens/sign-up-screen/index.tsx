@@ -1,4 +1,5 @@
 import Button from "@/components/shared/button"
+import GoogleSignButton from "@/components/shared/gbutton"
 import Input from "@/components/shared/input"
 import SafeAreaWrapper from "@/components/shared/safe-area-wrapper"
 import { AuthScreenNavigationType } from "@/navigation/types"
@@ -46,7 +47,7 @@ const SignUpScreen = () => {
     <SafeAreaWrapper>
       <Box flex={1} px="5.5" mt={"13"}>
         <Text variant="textXl" fontWeight="700">
-          Welcome to Blossom!
+          Welcome to MyStartUp!
         </Text>
         <Text variant="textXl" fontWeight="700" mb="6">
           Your journey starts here
@@ -113,8 +114,9 @@ const SignUpScreen = () => {
           </Text>
         </Pressable>
         <Box mb="5.5" />
-
-        <Button label="Register" onPress={handleSubmit(onSubmit)} uppercase />
+        <GoogleSignButton label="Sign in with Google" onPress={handleSubmit(onSubmit)} />
+        <Box mb="5.5" />
+        <Button label="Sign up" onPress={handleSubmit(onSubmit)} uppercase />
       </Box>
     </SafeAreaWrapper>
   )
